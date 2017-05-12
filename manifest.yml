@@ -1,0 +1,5 @@
+---
+applications:
+- name: buggy
+  command: knex --knexfile db/knexfile.js --env production migrate:latest && NODE_ENV=production node db/seeds/bookshelf/dev.js && npm start
+  buildpack: nodejs_buildpack
